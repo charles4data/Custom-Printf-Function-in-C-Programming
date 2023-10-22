@@ -39,11 +39,11 @@ int _printf(char *format, ...)
                         counter++;
                     }
                 }
-                else if (*format == 'd')
+                else if (*format == 'd' || *format == 'i')
                 {
                     int ch = va_arg(args, int);
                     putchar(ch);
-                    counter++
+                    counter++;
                 }
             }
         }
