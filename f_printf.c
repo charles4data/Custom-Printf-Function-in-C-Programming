@@ -45,6 +45,30 @@ int _printf(char *format, ...)
                     putchar(ch);
                     counter++;
                 }
+                else if (*format == 'x' || *format == 'X')
+                {
+                    double ch = va_arg(args, double);
+                    int upcs = (*format == 'X');
+                    custom_handle(num, upcs);
+                }
+                else if (*format == 'o')
+                {
+                    int ch = va_arg(args, int);
+                    putchar(ch);
+                    counter++;
+                }
+                else if (*format == 'u')
+                {
+                    unsigned int ch = va_arg(args, unsigned int);
+                    putchar(ch);
+                    counter++;
+                }
+                else if (*format == 'p')
+                {
+                    void *ptr = va_arg(args, void *);
+                    putchar(*ptr);
+                    counter++;
+                }
             }
         }
     }
