@@ -7,7 +7,7 @@ flags, etc.
 -----------------
 ## Format Specifiers
 
-The function will be able to hand a variety of format specifiers such as:
+The function will be able to handle a variety of format specifiers such as:
 + %d or %i for integers.
 + %f for floating-point numbers.
 + %c for characters.
