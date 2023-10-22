@@ -39,6 +39,12 @@ int _printf(char *format, ...)
                         counter++;
                     }
                 }
+                else if (*format == 'd')
+                {
+                    int ch = va_arg(args, int);
+                    putchar(ch);
+                    counter++
+                }
             }
         }
     }
