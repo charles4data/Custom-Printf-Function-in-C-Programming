@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include "main.h"
 
 /**
 * _printf - prints formatted strings,
@@ -9,8 +10,8 @@
 
 int _printf(char *format, ...)
 {
-    var_list args;
-    var_start(args, format);
+    va_list args;
+    va_start(args, format);
 
     while (*format)
     {
@@ -49,7 +50,7 @@ int _printf(char *format, ...)
                 {
                     double ch = va_arg(args, double);
                     int upcs = (*format == 'X');
-                    custom_handle(num, upcs);
+                    custom_handle(ch, upcs);
                 }
                 else if (*format == 'o')
                 {
